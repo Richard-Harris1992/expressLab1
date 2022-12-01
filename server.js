@@ -37,7 +37,15 @@ app.get('/', (req, res) => {
         `<h1>Welcome to our homepage</h1>
         <h2><a href="./about"> About </a></h2>
         <h2><a href="./students">Students</a></h2>
-        <h2><a href="./contact">Contact Info</a></h2>`
+        <h2><a href="./contact">Contact Info</a></h2>
+        <h2><a href="./values"> Our Values</a></h2>
+        <h2><a href="./reviews">Reviews</a></h2>
+        <h2><a href="./games">Connect 4</a></h2>
+        <h2><a href="./google">Google</a></h2>
+        
+        
+        `
+        
     );
 });
 
@@ -62,6 +70,21 @@ app.get('/contact/payMe', (req, res) => {
     </br> Your money... I mean education is important to us. Please join us.`});
 });
 
+app.get('/values', (req, res) => {
+    res.send(`<h2> education </h2>`);
+});
+
+app.get('/reviews', (req, res) => {
+    res.send(`<h2> Cannot display </h2>`);
+});
+
+app.get('/games', (req, res) => {
+    res.send(`<h2><a href="https://richard-harris1992.github.io/Connect4"> Connect 4 </a></h2>`);
+});
+
+app.get('/google', (req, res) => {
+    res.send(`<h2><a href="https://www.google.com/"> google </a></h2>`);
+});
 
 
 app.listen(port, () => console.log(`3000 is used`));
